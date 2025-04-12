@@ -1,6 +1,10 @@
 [package]
 name = "graphql"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
+async-graphql = "7.0.16"
+async-graphql-poem = "7.0.16"
+poem = "3.1.7"
+tokio = { version = "1.44.2", features = ["rt-multi-thread"] }

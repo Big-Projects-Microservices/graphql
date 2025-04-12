@@ -89,7 +89,9 @@ async fn main() -> Result<(), Box<dyn Error>> {
         .await?;
 
     // create the schema
-    let schema = Schema::build(Query, Mutation, EmptySubscription).finish();
+    let schema = Schema::build(Query, Mutation, EmptySubscription)
+        .data(Arc::new(channel.clone()))
+        .finish();
 
     // start the http server
     let app = Route::new().at("/", get(graphiql).post(GraphQL::new(schema)));

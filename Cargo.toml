@@ -6,5 +6,8 @@ edition = "2024"
 [dependencies]
 async-graphql = "7.0.16"
 async-graphql-poem = "7.0.16"
+bson = "2.14.0"
+lapin = "2.5.3"
 poem = "3.1.7"
+serde = "1.0.219"
 tokio = { version = "1.44.2", features = ["rt-multi-thread"] }

@@ -11,4 +11,6 @@ COPY . .
 
 RUN cargo build -r
 
+EXPOSE 8000
+
 CMD ["./target/release/graphql"]
